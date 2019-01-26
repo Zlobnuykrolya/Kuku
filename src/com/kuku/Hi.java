@@ -40,11 +40,11 @@ public class Hi {
         System.out.println("Enter password:");
         Scanner scanner = new Scanner(System.in);
         String userPassword = scanner.nextLine();
-        if (password == userPassword) {
+        if (password.equals(userPassword)) {
             System.out.println("You win!!!");
         }
         else {
-            System.out.println("You loose");
+            System.out.println("You loose:(");
         }*/
 
         //Task 5: Arguments sum
