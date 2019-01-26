@@ -55,7 +55,7 @@ public class Hi {
 
         System.out.println("Summary: " + sum);*/
 
-       //Task 6: Complicated
+       //Task 6.1: Complicated
 
     }
 }
