@@ -53,7 +53,7 @@ public class Hi {
             sum += Integer.parseInt(args[i]);
         }
 
-        System.out.println("Summary: " + sum);
+        System.out.println("Hi: " + sum);
         System.out.println("Summary: " + sum);
         System.out.println("Summary: " + sum);
         System.out.println("Summary: " + sum);
