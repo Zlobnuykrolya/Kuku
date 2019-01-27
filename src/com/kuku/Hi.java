@@ -48,12 +48,16 @@ public class Hi {
         }*/
 
         //Task 5: Arguments sum
-       /* int sum = 0;
+       int sum = 0;
         for (int i = 0; i < args.length; i++) {
             sum += Integer.parseInt(args[i]);
         }
 
-        System.out.println("Summary: " + sum);*/
+        System.out.println("Summary: " + sum);
+        System.out.println("Summary: " + sum);
+        System.out.println("Summary: " + sum);
+        System.out.println("Summary: " + sum);
+        System.out.println("Summary: " + sum);
 
 
     }
