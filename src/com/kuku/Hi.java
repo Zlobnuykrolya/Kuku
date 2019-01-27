@@ -60,6 +60,10 @@ public class Hi {
         System.out.println("Sum: " + sum);
         System.out.println("Sum: " + sum);
         System.out.println("Sum: " + sum);
+        System.out.println("Sum: " + sum);
+        System.out.println("Sum: " + sum);
+        System.out.println("Sum: " + sum);
+        System.out.println("Sum: " + sum);
        ;
 
 
