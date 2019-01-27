@@ -57,9 +57,7 @@ public class Hi {
         System.out.println("Summary: " + sum);
         System.out.println("Hello: " + sum);
         System.out.println("Sum: " + sum);
-        System.out.println("i");
-        System.out.println("i");
-        System.out.println("i");
+       System.out.println("i");
 
     }
 }
