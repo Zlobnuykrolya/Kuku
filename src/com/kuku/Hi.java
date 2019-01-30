@@ -53,13 +53,81 @@ public class Hi {
       /* int sum = 0;
         for (int i = 0; i < args.length; i++) {
             sum += Integer.parseInt(args[i]);
+        }*/
+
+      //Task 6:
+        System.out.println("Enter n numbers:");
+        Scanner scanner = new Scanner(System.in);
+        String[] split = scanner.nextLine().split("\\s+");
+
+        System.out.println("Even numbers:");
+        for (String numStr : split) {
+            int number = Integer.parseInt(numStr);
+            if (number % 2 == 0) {
+                System.out.println(number);
+            }
         }
 
-        System.out.println("Hi: " + sum);
-        System.out.println("Summary: " + sum);
-        System.out.println("Hello: " + sum);
-        System.out.println("Sum: " + sum);
-       System.out.println("i");
+        System.out.println("Odd numbers:");
+        for (String numStr : split) {
+            int number = Integer.parseInt(numStr);
+            if (number % 2 == 1) {
+                System.out.println(number);
+            }
+        }
 
+        int min = Integer.MAX_VALUE;
+        int max = 0;
+        for (String numStr : split) {
+            int number = Integer.parseInt(numStr);
+            if (number < min) {
+                min = number;
+            }
+            if (number > max) {
+                max = number;
+            }
+        }
+        System.out.println("Min number: " + min);
+        System.out.println("Max number: " + max);
+
+
+        System.out.println("Dividable by 3 or 9:");
+        for (String numStr : split) {
+            int number = Integer.parseInt(numStr);
+            if (number % 3 == 0 || number % 9 == 0) {
+                System.out.println(number);
+            }
+        }
+
+        System.out.println("Dividable by 5 and 7:");
+        for (String numStr : split) {
+            int number = Integer.parseInt(numStr);
+            if (number % 5 == 0 && number % 7 == 0) {
+                System.out.println(number);
+            }
+        }
+
+        System.out.println("Different triplex:");
+        for (String number : split) {
+            if (number.length() == 3) {
+                String[] chars = number.split("");
+                if (!chars[0].equals(chars[1]) &&
+                    !chars[1].equals(chars[2]) &&
+                    !chars[0].equals(chars[2]) ) {
+                    System.out.println(number);
+                }
+            }
+        }
+
+        System.out.println("Lucky numbers:");
+        for (String number: split) {
+            if (number.length() == 4) {
+                String[] chars = number.split("");
+                if (Integer.parseInt(chars[0]) + Integer.parseInt(chars[1]) ==
+                    Integer.parseInt(chars[2]) + Integer.parseInt(chars[3])) {
+                    System.out.println(number);
+                }
+            }
+        }
     }
 }
