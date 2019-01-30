@@ -6,6 +6,8 @@ import java.util.Random;
 
 
 public class Hi {
+    private static Object Scanner;
+
     public static void main(String[] args) throws IOException {
         // Task 1: Hello name
        /* System.out.println("Enter your name:");
@@ -48,7 +50,7 @@ public class Hi {
         }*/
 
         //Task 5: Arguments sum
-       int sum = 0;
+      /* int sum = 0;
         for (int i = 0; i < args.length; i++) {
             sum += Integer.parseInt(args[i]);
         }
