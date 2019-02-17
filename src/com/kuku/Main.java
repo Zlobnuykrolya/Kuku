@@ -1,6 +1,7 @@
 package com.kuku;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -99,14 +100,96 @@ public class Main {
                 System.out.println(x[i1]);
         }*/
 
-        for (int i = 0; i < 10; i++) {
+        /*for (int i = 0; i < 10; i++) {
             if (i % 2 == 0) continue;
-                System.out.println(i+" ");
-        }
-    }
+            System.out.println(i + " ");
+        }*/
+
 
     /*static void m() {
         System.out.println("Yes");
     }*/
+
+        /*String strInt = "123";
+        String strDouble = "123.456";
+        int x;
+        double y;
+        x = Integer.parseInt(strInt);
+        y = Double.parseDouble(strDouble);
+        System.out.println("x=" + x);
+        System.out.println("y=" + y);
+        strInt = String.valueOf(x + 1);
+        strDouble = String.valueOf(y + 1);
+        System.out.println("strint=" + strInt);
+        System.out.println("strDouble=" + strDouble);
+        String str;
+        str = "nim=" + 345;
+        System.out.println(str);*/
+
+       /* int a[][] = {{1, 45},
+                     {2, 100},
+                     {3, 456}};*/
+        /*for (int i : a) {
+            System.out.println(i);
+        }
+        for (int i = a.length - 1; i >= 0; i--) {
+            System.out.println(a[i]);
+        }
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }*/
+
+        /*Arrays.stream(a)
+                .map(s->s*2)
+                .forEach(s->System.out.print(s+" "));
+        System.out.println(Arrays.toString(a));*/
+
+       /* for (int[] ints : a) {
+            for (int anInt : ints) {
+                System.out.print(anInt+ " ");
+            }
+            System.out.println();
+
+        }*/
+       /* int a[] = {5, 2, 9, 15, 3, 11};*/
+        /*invert(a);
+        showArray(a);
+
+        invert(a);
+        showArray(a);*/
+        /*sortArray(a);*/
+        /*showArray(a);
+        invert(a);*/
+        /*showArray(a);*/
+
+        int[] arr = {10, 20, 30, 40};
+        int pos = Arrays.binarySearch(arr, 20);
+        System.out.println(pos);
+    }
+
+    private static void sortArray(int[] a) {
+        for (int barrier = a.length - 1; barrier >= 0; barrier--) {
+            for (int i = 0; i < barrier;i++) {
+                if (a[i] > a[i + 1]) {
+                    int temp = a[i];
+                    a[i] = a[i+1];
+                    a[i+1] = temp;
+                }
+            }
+        }
+    }
+
+    private static void showArray(int[] a) {
+        System.out.println(Arrays.toString(a));
+    }
+
+    /*private static void invert(int[] a) {
+        for (int i = 0; i < a.length / 2; i++) {
+            int temp = a[i];
+            a[i] = a[a.length - i - 1];
+            a[a.length - i - 1] = temp;
+        }
+    }*/
+
 }
 
