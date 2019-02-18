@@ -26,7 +26,7 @@ public class Matrix {
             //sortArray(a[i]);
         }
 
-        showArray(a);
+        showMatrix(a);
 
         // Task 9.2: Cyclic shift
         System.out.println();
@@ -42,7 +42,7 @@ public class Matrix {
             }
         }
 
-        showArray(a);
+        showMatrix(a);
 
         // Task 9.3: Max increasing number
         System.out.println();
@@ -88,6 +88,65 @@ public class Matrix {
             }
             System.out.println(sum);
         }
+
+        //Task 9.5: Rotation
+        System.out.println();
+        System.out.println("Rotation: ");
+        int[][] b = new int[a.length][a.length];
+        for (int i = 0; i < b.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                b[j][i] = a[a.length - i - 1][j];
+            }
+        }
+
+        showMatrix(b);
+
+        //Task 9.6: Substract averege
+        System.out.println();
+        System.out.println("Substructed averege: ");
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            for (int j = 0; j < n; j++) {
+                sum += a[i][j];
+            }
+            int average = sum / n;
+            for (int j = 0; j < n; j++) {
+                a[i][j] -= average;
+            }
+        }
+
+        showMatrix(a);
+
+        // Task 9.7: Remoove zero rows/columns
+        System.out.println();
+        System.out.println("Remooved zero rows/columns: ");
+        boolean[] notEmptyColumns = new boolean[n];
+        boolean[] notEmptyRows = new boolean[n];
+
+        int[][] c = {{1, 0, 3},
+                     {0, 0, 0},
+                     {7, 0, 9}};
+
+        for (int i = 0; i < c.length; i++) {
+            for (int j = 0; j < c.length; j++) {
+                if (c[i][j] != 0) {
+                    notEmptyColumns[i] = true;
+                    notEmptyRows[j] = true;
+                }
+
+            }
+        }
+
+        for (int i = 0; i < c.length; i++) {
+            if (notEmptyRows[i]) {
+                for (int j = 0; j < c[i].length; j++) {
+                    if (notEmptyColumns[j]) {
+                        System.out.print(c[i][j] + "\t");
+                    }
+                }
+                System.out.println();
+            }
+        }
     }
 
     private static void sortArray(int[] a) {
@@ -102,7 +161,7 @@ public class Matrix {
         }
     }
 
-    private static void showArray(int[][] a) {
+    private static void showMatrix(int[][] a) {
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
                 System.out.print(a[i][j] + "\t");
